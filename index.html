@@ -7,6 +7,16 @@
     <title>Vue-test</title>
 </head>
 <body>
-    
+    <div id="app">
+        <a v-bind:href="link">{{text}}</a>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {text: 'Google', link:'https://google.com/'}
+        });
+    </script>
 </body>
 </html>
+<!-- https://metanit.com/web/vuejs/1.7.php -->
