@@ -1,6 +1,6 @@
 <template>
-   <!-- <h1>{{ msg }} ukhuk</h1> -->
-    <div class="img1"></div>
+   <h1>{{ msg }} </h1>
+
 </template>
 
 <script>

@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
+    <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div> -->
-    
+    </div>
     <router-view />
+    <p>{{ a }}</p>
   </div>
-  
 </template>
 <script>
-
+console.log("test");
+var a = 5;
 </script>
 
 <style>
