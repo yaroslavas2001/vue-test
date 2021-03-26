@@ -5,12 +5,19 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
-    <p>{{ a }}</p>
+    <div id="test">
+      {{ message }}
+    </div>
   </div>
 </template>
 <script>
 console.log("test");
-var a = 5;
+var test = new Vue({
+  el: "#test",
+  data: {
+    message: "test!",
+  },
+});
 </script>
 
 <style>
