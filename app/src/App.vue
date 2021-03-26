@@ -1,23 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view />
-    <div id="test">
+    <div id="app"></div> -->
+    <!-- <div id="test">
       {{ message }}
-    </div>
+    </div> -->
+    <router-view />
   </div>
 </template>
 <script>
-console.log("test");
-var test = new Vue({
-  el: "#test",
-  data: {
-    message: "test!",
+export default {
+  name: "HelloWorld",
+  props: {
+    msg: String,
   },
-});
+  data: function() {
+    var f = 1
+    return {message : "Выберете из двух одно"+ f}
+  }
+};
 </script>
 
 <style>
