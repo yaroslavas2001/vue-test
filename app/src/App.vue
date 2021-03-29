@@ -8,7 +8,7 @@
     <!-- <div id="test">
       {{ message }}
     </div> -->
-    <router-view />
+    <router-view @test="test"/>
   </div>
 </template>
 <script>
