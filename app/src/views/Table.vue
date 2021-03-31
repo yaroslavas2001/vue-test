@@ -56,8 +56,10 @@ export default {
       this.currentPair.img1=this.dogs[this.index];
       this.currentPair.img2=this.dogs[this.index+1];
       this.index = this.index + 2;
+      console.log(this.index);
       }else{
-        if(this.mass==8){
+        console.log("else");
+        if(this.mass.length==8){
           this.mass_8=this.mass;
           this.dogs = this.mass;
           this.mass = [];
@@ -65,18 +67,37 @@ export default {
           this.currentPair.img1=this.dogs[this.index];
           this.currentPair.img2=this.dogs[this.index+1];
           this.index = this.index + 2;
+          console.log("ну типа конец на 8");
+          //рабочая схема
         };
-        if(this.mass==4){
+        if(this.mass.length==4){
           this.mass_4=this.mass;
           this.dogs = this.mass;
           this.mass = [];
           this.index = 0;
+          this.currentPair.img1=this.dogs[this.index];
+          this.currentPair.img2=this.dogs[this.index+1];
+          this.index = this.index + 2;
+          console.log("ну типа конец на 4");
         };
-        if(this.mass==2){
+        if(this.mass.length==2){
           this.mass_2=this.mass;
           this.dogs = this.mass;
           this.mass = [];
           this.index = 0;
+          this.currentPair.img1=this.dogs[this.index];
+          this.currentPair.img2=this.dogs[this.index+1];
+          this.index = this.index + 2;
+           console.log("ну типа конец на 2");
+        };
+          if(this.mass.length==1){
+            this.mass_2=this.mass;
+            this.dogs = this.mass;
+            this.mass = [];
+            this.index = 0;
+            this.currentPair.img1=this.dogs[this.index];
+            this.currentPair.img2=this.dogs[this.index];
+            console.log("vin");   
         }
       };
       console.log(this.mass);
