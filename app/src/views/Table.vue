@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="grid" v-else>
-      <h1>vin</h1>
+      <h1>VIN</h1>
       <div id="left" class="left">
         <img id="img__left" :src="currentPair.img1" />
       </div>
@@ -45,6 +45,11 @@
           <img :src="img" alt="" />
         </div>
       </div>
+      <div class="grid_8">
+        <div class="img" v-for="img in dogs1" :key="img">
+          <img :src="img" alt="" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -57,6 +62,24 @@ export default {
   data: function () {
     return {
       dogs: [
+        "https://bipbap.ru/wp-content/uploads/2017/10/07_06_2017_10_08_15_jijtj2ru3nraq07t0u7a9degh0_war6mice03.jpg",
+        "https://bipbap.ru/wp-content/uploads/2017/10/00115b52c3100b01ac0a0b.jpg",
+        "https://milota.online/storage/posts/January2019/TDu3BrpBSNNwy0pzTba3.jpg",
+        "https://milota.online/storage/posts/January2019/velsh-korgi.jpg",
+        "https://milota.online/storage/posts/January2019/kavaler-spaniel.jpg",
+        "https://milota.online/storage/posts/January2019/veymarskaya-legavaya.jpg",
+        "https://milota.online/storage/posts/January2019/milaya-haski.jpg",
+        "https://milota.online/storage/posts/January2019/miliy-york.jpg",
+        "https://images11.popmeh.ru/upload/img_cache/a31/a31231f224e1df77d915693886df424d_cropped_666x412.webp?webp",
+        "https://images11.popmeh.ru/upload/img_cache/84b/84b53cf4a80aa15e9ffb86fc968c8939_cropped_666x414.webp?webp",
+        "https://images11.popmeh.ru/upload/img_cache/e75/e75424310a1f0b0f2a30f6c70776e70c_cropped_666x355.webp?webp",
+        "https://www.sobaka.ru/images/image/01/18/55/25/_normal.jpg",
+        "https://ru.mypetandi.com/sites/g/files/adhwdz671/files/styles/paragraph_image/public/2020-04/small-dog-grass.jpg?itok=skKvamJG",
+        "https://porodu-sobak.ru/wp-content/uploads/2018/06/samoyed16.jpg",
+      ],
+      dogs1: [
+        "https://cs4.pikabu.ru/post_img/2014/03/19/10/1395243232_1089834701.jpg",
+        "https://img4.goodfon.ru/wallpaper/nbig/8/70/shchenok-sobachka-boke-kappa-mylnyi-puzyr.jpg",
         "https://bipbap.ru/wp-content/uploads/2017/10/07_06_2017_10_08_15_jijtj2ru3nraq07t0u7a9degh0_war6mice03.jpg",
         "https://bipbap.ru/wp-content/uploads/2017/10/00115b52c3100b01ac0a0b.jpg",
         "https://milota.online/storage/posts/January2019/TDu3BrpBSNNwy0pzTba3.jpg",
@@ -122,7 +145,9 @@ export default {
           console.log("ну типа конец на 4");
         }
         if (this.mass.length == 2) {
+          console.log(this.mass);
           this.mass_2 = this.mass;
+          console.log(this.mass_2);
           this.dogs = this.mass;
           this.mass = [];
           this.index = 0;
@@ -132,12 +157,7 @@ export default {
           console.log("ну типа конец на 2");
         }
         if (this.mass.length == 1) {
-          this.mass_2 = this.mass;
-          this.dogs = this.mass;
-          this.mass = [];
-          this.index = 0;
-          this.currentPair.img1 = this.dogs[this.index];
-          this.currentPair.img2 = this.dogs[this.index];
+          this.currentPair.img1 = this.mass[0];
           console.log("vin");
           this.grid();
         }
@@ -178,6 +198,12 @@ export default {
   width: 50%;
   height: 100%;
 }
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .grid_8,
 .grid_4,
 .grid_2 {
@@ -187,5 +213,6 @@ export default {
 .img img {
   height: 80px;
   width: 80px;
+  margin: 5px;
 }
 </style>
